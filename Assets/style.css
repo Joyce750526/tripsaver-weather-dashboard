@@ -1,27 +1,52 @@
+/* * {
+  margin: 5px;
+} */
+
+header h1{
+  background-color: none;
+  align-items: center;
+  font-size: 60px;
+}
+
 h1 {
-    text-align: center;
-    background-color: royalblue;
-    color:white;
-    font-family: 'Mulish', sans-serif;
-    width:100%;
-    padding:15px;
-  }
-  .input-group {
-    margin-bottom: 15px;
-  }
-  .header-style {
-    font-size: 50px;
-    color: #ffffff;
-    font-family: 'Mulish', sans-serif;
-    text-align: center;
-  }
-  .card {
-    width:100%;
-  }
-  .fiveDay{    
-    background-color: royalblue;
-    margin: 15px;
-  }
-  h3 {
-    float:left;
-  }
+  align-items: center;
+  color: burlywood;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  width: 100%;
+  padding: 15px;
+}
+.col-4 h4 {
+  padding-left: 15px;
+}
+
+.search-bar .w-100 {
+  align-items: center;
+  margin-left: 10px;
+}
+.jumbotron {
+  height: 50%;
+  font-size: 50px;
+  background-color: royalblue;
+  font-family: "Mulish", sans-serif;
+  text-align: center;
+}
+.card {
+  width: 100%;
+}
+.fiveDay {
+  background-color: royalblue;
+  margin: 15px;
+}
+h3 {
+  float: left;
+  color: brown;
+}
+#footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
