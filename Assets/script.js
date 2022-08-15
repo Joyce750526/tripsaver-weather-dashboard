@@ -41,17 +41,24 @@ function fetchCity(latitude, longitude) {
         })
         .then(function (data) {
             console.log(data);
+
             var titleEl = document.createElement('h4');
             titleEl.classList.add('card');
+
             titleEl.textContent = `${data.name} (${new Date().toLocaleDateString()})`;
             var cardEl = document.createElement('div');
             cardEl.classList.add('card');
+
             var windEl = document.createElement('p');
             windEl.classList.add('card-text');
+
+
             var humidEl = document.createElement('p');
             humidEl.classList.add('card-text');
+
             var tempEl = document.createElement('p');
             tempEl.classList.add('card-text');
+            
             humidEl.textContent = `Humidity: ${data.main.humidity} %`;
             tempEl.textContent = `Temperature: ${data.main.temp} °F`;
             var cardBody = document.createElement('div');
