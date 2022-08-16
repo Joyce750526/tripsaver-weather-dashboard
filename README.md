@@ -25,9 +25,7 @@
 https://github.com/Joyce750526/tripsaver-weather-dashboard
 
 * Github Deployed Page: 
- https://joyce750526.github.io/tripsaver-weather-dashboard/
-
-
+https://joyce750526.github.io/tripsaver-weather-dashboard/
 ---
 
 
