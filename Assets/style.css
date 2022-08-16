@@ -1,6 +1,6 @@
-/* * {
-  margin: 5px;
-} */
+* {
+  padding: 5px;
+}
 
 header h1{
   background-color: none;
@@ -15,11 +15,11 @@ h1 {
   width: 100%;
   padding: 15px;
 }
-.col-4 h4 {
+.col-4 .col-8 {
   padding-left: 15px;
 }
 
-.search-bar .w-100 {
+.search-bar {
   align-items: center;
   margin-left: 10px;
 }
@@ -40,6 +40,9 @@ h1 {
 h3 {
   float: left;
   color: brown;
+}
+#city {
+  padding-left: 10px;
 }
 #footer {
   position: fixed;
