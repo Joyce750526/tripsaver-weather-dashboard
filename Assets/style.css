@@ -7,7 +7,10 @@ header h1{
   align-items: center;
   font-size: 60px;
 }
-
+.row-today-weather {
+  align-items: right;
+  
+}
 h1 {
   align-items: center;
   color: burlywood;

@@ -20,7 +20,7 @@
         <h1><strong>Trip Saver Weather Dashboard</strong></h1>
   </header>
   <div class=main-container>
-    <div class="row justify-content-start">
+    <div class="row justify-content-left">
       <div class="col-4">
         <h4><strong>Search for a City</strong></h4>
         <input type="text" id="city" class="search-bar w-50" placeholder="search here">
@@ -31,30 +31,65 @@
     </div>
 
     <!-- Current Weather Display -->
-    <div class="row row-today-weather justify-content-start">
-      <div class="col-8">
-        <h4><strong>Current Weather</strong></h4>
+    <div class="card row-today-weather ">
+      <div class="card-body row-today-weather">
+        This is some text within a card block.
+      </div>
+
+      <div class="forcast-card">
+
+        <div class="day" id="day-1"></div>
+        <div class="temp" id="temp-1"></div>
+        <div class="wind" id="wind-1"></div>
+        <div class="humidity" id="humid-1"></div>
+        <img class="weather-icon" alt="weather-icon" id="icon-1"></img>
+
+
       </div>
     </div>
-  </div>
 
-  <!-- <div class="col-12 col-md-9 p-3 text-light">
-    <h2>Showing results for <span id="result-text"></span></h2>
-    <div id="result-content"></div>
-  </div>
-  </div>
-  <h3><strong>5-Day Forecast</strong></h3>
-  </div>
-  <div class="row" id="weather-results"></div>
-  </div>
-  </div> -->
+    <div class="forcast-card">
 
-  <!-- script links -->
-  <script src="https://kit.fontawesome.com/3c309b0cab.js" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
-  <script src="./assets/script.js"></script>
+      <div class="day" id="day-2"></div>
+      <div class="temp" id="temp-2"></div>
+      <div class="wind" id="wind-2"></div>
+      <div class="humidity" id="humid-2"></div>
+      <img class="weather-icon" alt="weather-icon" id="icon-2"></img>
+
+      <div class="forcast-card">
+
+        <div class="day" id="day-3"></div>
+        <div class="temp" id="temp-3"></div>
+        <div class="wind" id="wind-3"></div>
+        <div class="humidity" id="humid-3"></div>
+        <img class="weather-icon" alt="weather-icon" id="icon-3"></img>
+
+        <div class="forcast-card">
+
+          <div class="day" id="day-4"></div>
+          <div class="temp" id="temp-4"></div>
+          <div class="wind" id="wind-4"></div>
+          <div class="humidity" id="humid-4"></div>
+          <img class="weather-icon" alt="weather-icon" id="icon-4"></img>
+
+          <div class="forcast-card">
+
+            <div class="day" id="day-5"></div>
+            <div class="temp" id="temp-5"></div>
+            <div class="wind" id="wind-5"></div>
+            <div class="humidity" id="humid-5"></div>
+            <img class="weather-icon" alt="weather-icon" id="icon-5"></img>
+          </div>
+        </div>
+        <div class="text-muted" id="city-name">
+
+
+          <!-- script links -->
+          <script src="https://kit.fontawesome.com/3c309b0cab.js" crossorigin="anonymous"></script>
+          <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+          <script src="./assets/script.js"></script>
 
 
 </body>
