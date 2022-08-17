@@ -13,7 +13,7 @@
 // THEN I am again presented with current and future conditions for that city
 
 
-var todayEl=document.querySelector(".row-today-weather");
+var todayEl = document.querySelector(".row-today-weather");
 
 var ApiKey = "a3aeb8a2a5907118519350d12d7d03e9";
 var searchBtn = document.querySelector("#search");
@@ -22,6 +22,8 @@ var searchBtn = document.querySelector("#search");
 // //Use moment.js library to display current day & time.(24 hour format!)
 // $("#currentDay").text(moment().format("MMMM Do YYYY, h:mm:ss a"));
 
+
+// Create function for user to search city
 function handleUserInput(event) {
     event.preventDefault();
     var searchInput = document.querySelector(".search-bar");
@@ -30,7 +32,7 @@ function handleUserInput(event) {
     fetchCity(cityName);
 }
 
-
+// Create function to search specific city data from the API that the user has requested
 function fetchCity(city) {
     // fetch request gets a list of all the repos for the node.js organization
     var requestUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${ApiKey}`;
@@ -41,16 +43,14 @@ function fetchCity(city) {
         })
         .then(function (data) {
             console.log(data);
-            var latitude= data.coord.lat;
-            var longitude=data.coord.lon;
+            var latitude = data.coord.lat;
+            var longitude = data.coord.lon;
             fetchByLatLon(latitude, longitude)
         });
 }
 
 
-
-
-// Use fetch function to get 5 days forecast to access latitude and longitude
+// Use fetch function to get today forecast to access latitude and longitude
 function fetchByLatLon(latitude, longitude) {
     // fetch request gets a list of all the repos for the node.js organization
     var LatLonUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${ApiKey}`;
@@ -62,47 +62,52 @@ function fetchByLatLon(latitude, longitude) {
         .then(function (data) {
             console.log(data);
 
-// Today Temp
-var todayTemp=data.current.temp;
-console.log(todayTemp);
+            // Today Temp
+            var todayTemp = data.current.temp;
+            console.log(todayTemp);
 
-// Today Wind Speed
-var todayWindspeed=data.current.wind_speed;
-console.log(todayWindspeed);
+            // Today Wind Speed
+            var todayWindspeed = data.current.wind_speed;
+            console.log(todayWindspeed);
 
-// Today Humidity
-var todayHumidity=data.current.humidity;
-console.log(todayHumidity);
+            // Today Humidity
+            var todayHumidity = data.current.humidity;
+            console.log(todayHumidity);
 
-// Today UVI
-var todayUVI=data.current.uvi;
-console.log(todayUVI);
+            // Today UVI
+            var todayUVI = data.current.uvi;
+            console.log(todayUVI);
+
+            // Create variables for each weather elements
+            var tempEl = document.createElement('p');
+            tempEl.classList.add('card-text');
+            tempEl.textContent = `Temp: ${todayTemp}`;
+            todayEl.appendChild(tempEl);
+
+            var windEl = document.createElement('p');
+            windEl.classList.add('card-text');
+            windEl.textContent = `Wind Speed: ${todayWindspeed}`;
+            todayEl.appendChild(windEl);
+
+            var humidEl = document.createElement('p');
+            humidEl.classList.add('card-text');
+            humidEl.textContent = `Humidity: ${todayHumidity}`;
+            todayEl.appendChild(humidEl);
+
+            var uviEl = document.createElement('p');
+            uviEl.classList.add('card-text');
+            uviEl.textContent = `Wind Speed: ${todayUVI}`;
+            todayEl.appendChild(uviEl);
+        });
+}
 
 
-            // var titleEl = document.createElement('h4');
+   // var titleEl = document.createElement('h4');
             // titleEl.classList.add('card');
 
             // titleEl.textContent = `${data.name} (${new Date().toLocaleDateString()})`;
             // var cardEl = document.createElement('div');
             // cardEl.classList.add('card');
 
-            var windEl = document.createElement('p');
-            windEl.classList.add('card-text');
-            windEl.textContent=`Wind Speed: ${todayWindspeed}`;
-            todayEl.appendChild(windEl);
-
-
-
-            var humidEl = document.createElement('p');
-            humidEl.classList.add('card-text');
-            humidEl.textContent=todayHumidity
-            todayEl.appendChild(humidEl)
-            // var tempEl = document.createElement('p');
-            // tempEl.classList.add('card-text');
-            
-
-
-        });
-}
 
 searchBtn.addEventListener("click", handleUserInput);
