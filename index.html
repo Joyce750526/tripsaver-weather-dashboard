@@ -8,6 +8,8 @@
   <title>Document</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
     integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&subset=greek" rel="stylesheet">
   <link rel="stylesheet" href="./assets/style.css" />
   <title>Your Trip Saver Weather Dashboard</title>
@@ -31,66 +33,80 @@
     </div>
 
     <!-- Current Weather Display -->
-    <div class="card row-today-weather ">
-      <div class="card-body row-today-weather">
-        This is some text within a card block.
-      </div>
-
-      <div class="forcast-card">
-
-        <div class="day" id="day-1"></div>
-        <div class="temp" id="temp-1"></div>
-        <div class="wind" id="wind-1"></div>
-        <div class="humidity" id="humid-1"></div>
-        <img class="weather-icon" alt="weather-icon" id="icon-1"></img>
-
-
+    <div class="card row-today-weather">
+      <div class="card-body">
       </div>
     </div>
 
-    <div class="forcast-card">
+    <!-- 5 Days Weather Display -->
+    <div class="card-body"></div>
+    <div class="forcast-title">
+      <h5><strong>5-Days Forecast:</strong></h5>
+    </div>
 
-      <div class="day" id="day-2"></div>
-      <div class="temp" id="temp-2"></div>
-      <div class="wind" id="wind-2"></div>
-      <div class="humidity" id="humid-2"></div>
-      <img class="weather-icon" alt="weather-icon" id="icon-2"></img>
+    <!-- five day -->
+    <div class="forcast-container">
+    </div>
+    <div class="card-body">
+    </div>
 
-      <div class="forcast-card">
 
-        <div class="day" id="day-3"></div>
-        <div class="temp" id="temp-3"></div>
-        <div class="wind" id="wind-3"></div>
-        <div class="humidity" id="humid-3"></div>
-        <img class="weather-icon" alt="weather-icon" id="icon-3"></img>
 
-        <div class="forcast-card">
-
-          <div class="day" id="day-4"></div>
-          <div class="temp" id="temp-4"></div>
-          <div class="wind" id="wind-4"></div>
-          <div class="humidity" id="humid-4"></div>
-          <img class="weather-icon" alt="weather-icon" id="icon-4"></img>
-
-          <div class="forcast-card">
-
-            <div class="day" id="day-5"></div>
-            <div class="temp" id="temp-5"></div>
-            <div class="wind" id="wind-5"></div>
-            <div class="humidity" id="humid-5"></div>
-            <img class="weather-icon" alt="weather-icon" id="icon-5"></img>
-          </div>
+    <!--5 Days Weather Display-->
+    <!-- <div class="forcast-container">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Card title</h4>
+          <p class="card-text"></p>
         </div>
-        <div class="text-muted" id="city-name">
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Card title</h4>
+          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Card title</h4>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+            content.
+            This card has even longer content than the first to show that equal height action.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Card title</h4>
+          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title">Card title</h4>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+            content.
+            This card has even longer content than the first to show that equal height action.</p>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- <div class="forcast-container">
+
+    <div class="day" id="day-1"></div>
+    <div class="temp" id="temp-1"></div>
+    <div class="wind" id="wind-1"></div>
+    <div class="humidity" id="humid-1"></div>
+    <img class="weather-icon" alt="weather-icon" id="icon-1"></img> -->
+
+    <!-- <div class="text-muted" id="city-name"> -->
 
 
-          <!-- script links -->
-          <script src="https://kit.fontawesome.com/3c309b0cab.js" crossorigin="anonymous"></script>
-          <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
-          <script src="./assets/script.js"></script>
-
+    <!-- script links -->
+    <script src="https://kit.fontawesome.com/3c309b0cab.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <script src="./assets/script.js"></script>
 
 </body>
 

@@ -12,10 +12,9 @@
 // WHEN I click on a city in the search history
 // THEN I am again presented with current and future conditions for that city
 
-
-var todayEl = document.querySelector(".row-today-weather");
-
 var ApiKey = "a3aeb8a2a5907118519350d12d7d03e9";
+var todayEl = document.querySelector(".row-today-weather");
+var forecastContainer = document.querySelector(".forcast-container")
 var searchBtn = document.querySelector("#search");
 
 
@@ -98,16 +97,45 @@ function fetchByLatLon(latitude, longitude) {
             uviEl.classList.add('card-text');
             uviEl.textContent = `Wind Speed: ${todayUVI}`;
             todayEl.appendChild(uviEl);
+
+            //Use forloop to get 5 days weather forcast
+            for (let index = 0; index < 5; index++) {
+                console.log(data.daily[index].humidity);
+              
+                
+                var dailyHumidity = data.daily[index].humidity;
+                
+                // 5 days Temperture forcast
+                var dailyTemp = data.daily[index].temp.day;
+                var dailyTempEl = document.createElement("p");
+                dailyTempEl.classList.add("card-text");
+                dailyTempEl.textContent = `Temp: ${dailyTemp}`;
+                forecastContainer.append(dailyTemp);
+
+                // 5 days WindSpeed forcast
+                var dailyWindSpeed = data.daily[index].wind_speed;
+                var dailyWindSpeed = document.createElement("p");
+                dailyWindSpeed.classList.add("card-text");
+                dailyWindSpeed.textContent = `WindSpeed: ${dailyWindSpeed}`;
+                forecastContainer.append(dailyWindSpeed);
+
+                // 5 days Humidity forcast
+                var dailyHumidity = data.daily[index].humidity;
+                var dailyHumidity = document.createElement("p");
+                dailyHumidity.classList.add("card-text");
+                dailyHumidity.textContent = `Humdidity: ${dailyHumidity}`;
+                forecastContainer.append(dailyHumidity);
+            }
         });
 }
 
 
-   // var titleEl = document.createElement('h4');
-            // titleEl.classList.add('card');
+// var titleEl = document.createElement('h4');
+// titleEl.classList.add('card');
 
-            // titleEl.textContent = `${data.name} (${new Date().toLocaleDateString()})`;
-            // var cardEl = document.createElement('div');
-            // cardEl.classList.add('card');
+// titleEl.textContent = `${data.name} (${new Date().toLocaleDateString()})`;
+// var cardEl = document.createElement('div');
+// cardEl.classList.add('card');
 
 
 searchBtn.addEventListener("click", handleUserInput);
