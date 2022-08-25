@@ -14,7 +14,7 @@
 
 var ApiKey = "a3aeb8a2a5907118519350d12d7d03e9";
 var todayEl = document.querySelector(".row-today-weather");
-var forecastContainer = document.querySelector(".forcast-container")
+var forecastContainer = document.querySelector(".forecast-container")
 var searchBtn = document.querySelector("#search");
 
 
@@ -98,33 +98,32 @@ function fetchByLatLon(latitude, longitude) {
             uviEl.textContent = `Wind Speed: ${todayUVI}`;
             todayEl.appendChild(uviEl);
 
-            //Use forloop to get 5 days weather forcast
+            //Use forloop to get 5 days weather forecast
             for (let index = 0; index < 5; index++) {
                 console.log(data.daily[index].humidity);
               
                 
-                var dailyHumidity = data.daily[index].humidity;
-                
-                // 5 days Temperture forcast
+                // 5 days Temperture forecast
                 var dailyTemp = data.daily[index].temp.day;
+                console.log(dailyTemp);
                 var dailyTempEl = document.createElement("p");
                 dailyTempEl.classList.add("card-text");
                 dailyTempEl.textContent = `Temp: ${dailyTemp}`;
-                forecastContainer.append(dailyTemp);
+                forecastContainer.append(dailyTempEl);
 
-                // 5 days WindSpeed forcast
+                // 5 days WindSpeed forecast
                 var dailyWindSpeed = data.daily[index].wind_speed;
-                var dailyWindSpeed = document.createElement("p");
-                dailyWindSpeed.classList.add("card-text");
-                dailyWindSpeed.textContent = `WindSpeed: ${dailyWindSpeed}`;
-                forecastContainer.append(dailyWindSpeed);
+                var dailyWindSpeedEl = document.createElement("p");
+                dailyWindSpeedEl.classList.add("card-text");
+                dailyWindSpeedEl.textContent = `WindSpeed: ${dailyWindSpeed}`;
+                forecastContainer.append(dailyWindSpeedEl);
 
-                // 5 days Humidity forcast
+                // 5 days Humidity forecast
                 var dailyHumidity = data.daily[index].humidity;
-                var dailyHumidity = document.createElement("p");
-                dailyHumidity.classList.add("card-text");
-                dailyHumidity.textContent = `Humdidity: ${dailyHumidity}`;
-                forecastContainer.append(dailyHumidity);
+                var dailyHumidityEl = document.createElement("p");
+                dailyHumidityEl.classList.add("card-text");
+                dailyHumidityEl.textContent = `Humdidity: ${dailyHumidity}`;
+                forecastContainer.append(dailyHumidityEl);
             }
         });
 }
@@ -137,5 +136,11 @@ function fetchByLatLon(latitude, longitude) {
 // var cardEl = document.createElement('div');
 // cardEl.classList.add('card');
 
+// clear all the local storage after a page refresh
+$('#clear').click( function() {
+    window.localStorage.clear();
+    location.reload();
+    return false;
+    });
 
 searchBtn.addEventListener("click", handleUserInput);
