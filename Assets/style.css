@@ -8,8 +8,8 @@ header h1{
   font-size: 60px;
 }
 .row-today-weather {
-  align-items: right;
-  
+  align-items: left;
+  border: 1px solid gray;
 }
 h1 {
   align-items: center;
@@ -17,6 +17,9 @@ h1 {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   width: 100%;
   padding: 15px;
+}
+div.card-body{
+  font-size: 24px;
 }
 .col-4 .col-8 {
   padding-left: 15px;

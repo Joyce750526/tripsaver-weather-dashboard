@@ -81,23 +81,30 @@ function fetchByLatLon(latitude, longitude) {
             var tempEl = document.createElement('p');
             tempEl.classList.add('card-text');
             tempEl.textContent = `Temp: ${todayTemp}`;
-            todayEl.appendChild(tempEl);
+        
 
             var windEl = document.createElement('p');
             windEl.classList.add('card-text');
             windEl.textContent = `Wind Speed: ${todayWindspeed}`;
-            todayEl.appendChild(windEl);
+            
 
             var humidEl = document.createElement('p');
             humidEl.classList.add('card-text');
             humidEl.textContent = `Humidity: ${todayHumidity}`;
-            todayEl.appendChild(humidEl);
+            
 
             var uviEl = document.createElement('p');
             uviEl.classList.add('card-text');
-            uviEl.textContent = `Wind Speed: ${todayUVI}`;
+            uviEl.textContent = `UVI: ${todayUVI}`;
+           
+            todayEl.innerHTML=``;
+            todayEl.appendChild(tempEl);
+            todayEl.appendChild(windEl);
+            todayEl.appendChild(humidEl);
             todayEl.appendChild(uviEl);
 
+
+            forecastContainer.innerHTML=``;
             //Use forloop to get 5 days weather forecast
             for (let index = 0; index < 5; index++) {
                 console.log(data.daily[index].humidity);
