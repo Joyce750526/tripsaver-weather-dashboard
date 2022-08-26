@@ -11,6 +11,16 @@ header h1{
   align-items: left;
   border: 1px solid gray;
 }
+div.forecast-container{
+  margin-top: 30px;
+  border: 1px solid red;
+
+}
+p.card-text{
+  border: 1px solid orange;
+}
+
+
 h1 {
   align-items: center;
   color: burlywood;

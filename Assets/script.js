@@ -117,7 +117,7 @@ function fetchByLatLon(latitude, longitude) {
                 dailyTempEl.classList.add("card-text");
                 dailyTempEl.textContent = `Temp: ${dailyTemp}`;
                 forecastContainer.append(dailyTempEl);
-
+                
                 // 5 days WindSpeed forecast
                 var dailyWindSpeed = data.daily[index].wind_speed;
                 var dailyWindSpeedEl = document.createElement("p");
